@@ -23,14 +23,14 @@ export default {
   },
   fetchSearchFilms() {
     return fetch(
-      `${this.base}/search/company?api_key=${this.key}&query=${this.query}&page=${this.page}`,
+      `${this.base}/search/movie?api_key=${this.key}&language=en-US&page=${this.page}&include_adult=false`,
     )
       .then(response => response.json())
       .then(response => {
         return response;
       });
   },
-  fetchOneFilm(){
+  fetchOneFilm() {
     return fetch(
       `${this.base}/movie/${filmId}?api_key=${this.key}&language=en-US`,
     )
@@ -38,16 +38,16 @@ export default {
       .then(response => {
         return response;
       });
-  }
+  },
 };
 
 // const base = 'https://api.themoviedb.org/3';
 // const oneFilm = '/movie/443791';
-// const resourceSearch = '/search/company';
+// const resourceSearch = '/search/movie';
 // const resourceList = '/trending/movie/day';
 // const resourceGenre = '/genre/movie/list';
 // const searchParams =
-//   '?api_key=a2c80789bced092c10745aa4387db8d2&query=hallo&page=1';
+//   '?api_key=a2c80789bced092c10745aa4387db8d2&language=en-US&page=1&include_adult=false';
 // const genreParams = '?api_key=a2c80789bced092c10745aa4387db8d2&language=en-US';
 // const ratingParams = '?api_key=a2c80789bced092c10745aa4387db8d2&page=1';
 
