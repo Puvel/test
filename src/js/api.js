@@ -27,7 +27,7 @@ export default {
     )
       .then(response => response.json())
       .then(response => {
-        return response;
+        return response.results;
       });
   },
   fetchOneFilm() {
