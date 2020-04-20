@@ -23,7 +23,7 @@ export default {
   },
   fetchSearchFilms() {
     return fetch(
-      `${this.base}/search/movie?api_key=${this.key}&language=en-US&page=${this.page}&include_adult=false`,
+      `${this.base}/search/movie?api_key=${this.key}&language=en-US&query=${this.query}&page=${this.page}&include_adult=false`,
     )
       .then(response => response.json())
       .then(response => {
@@ -46,8 +46,7 @@ export default {
 // const resourceSearch = '/search/movie';
 // const resourceList = '/trending/movie/day';
 // const resourceGenre = '/genre/movie/list';
-// const searchParams =
-//   '?api_key=a2c80789bced092c10745aa4387db8d2&language=en-US&page=1&include_adult=false';
+// const searchParams ='?api_key=a2c80789bced092c10745aa4387db8d2&language=en-US&query=hall&page=1&include_adult=false';
 // const genreParams = '?api_key=a2c80789bced092c10745aa4387db8d2&language=en-US';
 // const ratingParams = '?api_key=a2c80789bced092c10745aa4387db8d2&page=1';
 
